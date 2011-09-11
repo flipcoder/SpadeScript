@@ -12,7 +12,7 @@ class SpadeScriptContext;
 #include <ctime>
 #include <sstream>
 
-#include "../Log.h"
+//#include "../Log.h"
 
 // A Spade Script Object
 class SpadeScript

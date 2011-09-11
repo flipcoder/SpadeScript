@@ -289,10 +289,9 @@ int SpadeScript :: call(const string& function,
 			result = argu;
 			return 1;
 		} else if (cmd.compare("log")==0) {
-			//cout<<argu<<endl; // make way to disable logging
+			cout<<argu<<endl; // make way to disable logging
 			// FIX: CHANGED FOR SPADE ENGINE
-			//OgreFramework::getSingletonPtr()->m_pLog->logMessage(argu);
-			Log::get().write(argu);
+			//Log::get().write(argu);
 		} else if (cmd.compare("math")==0) {
 			//erase spaces in math string
 			//while(argu.find_first_of(" ")!=string::npos)
