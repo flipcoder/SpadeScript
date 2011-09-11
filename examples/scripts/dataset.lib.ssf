@@ -1,0 +1,15 @@
+
+# Dataset Library
+
+# All revelenant code is internal
+# Do not load this file from another script
+
+function _()
+{
+	log ${._script}.${._instance} Created
+}
+
+function ~()
+{
+	log ${._script}.${._instance} Deleted
+}

@@ -1,0 +1,5 @@
+
+function _()
+{
+	log Weapon ${._name} Created
+}

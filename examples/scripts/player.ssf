@@ -1,0 +1,27 @@
+
+function _()
+{
+	set .ammo = 50
+	set .health = 100
+	
+	spawn dataset
+	set .inventory = dataset.${_result}
+	${.inventory}.add MACHINE_GUN
+	
+	log Player ${._instance} Spawned
+}
+
+function test()
+{
+	
+}
+
+function ~()
+{
+	log Player ${._instance} Removed
+}
+
+function test()
+{
+	_debug INSTANCE
+}

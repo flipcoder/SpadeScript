@@ -1,0 +1,74 @@
+
+
+# Basic Loops ##############################################
+
+function BasicLoops_Main
+{
+	set x = 0
+	loop 5
+	{
+		set x = ${x} + 1
+		if ${x} == 3
+		{
+			log Three
+			continue
+		}
+		
+		log ${x}
+	}
+}
+
+
+
+# Functions Example ##############################################
+
+function Functions_Main
+{
+	add 1, 2
+	log "add 1, 2" returned: ${result}
+}
+
+function add(a,b)
+{
+	math ${a} + ${b}
+	return ${result}
+}
+
+
+
+# Array Example ##############################################
+
+function ArrayExample_Main
+{
+	set i = 0
+	loop 4
+	{
+		set i = ${i} + 1
+		set player[${i}]ammo = 50 + ${i}
+	}
+	
+	set i = 0
+	loop 4
+	{
+		set i = ${i} + 1
+		set Selected = player[${i}]ammo
+		log Player ${i}'s ammo is ${${Selected}}
+	}
+	_printstack
+}
+
+
+
+
+# Binding Example ##############################################
+
+function BindExample_Main
+{
+	set default.bind = _printstack
+	BindExample_Run default.bind
+}
+
+function BindExample_Run(f)
+{
+	${${f}}
+}
