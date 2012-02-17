@@ -6,10 +6,10 @@
 
 function _()
 {
-	log ${._script}.${._instance} Created
+    log ${._script}.${._instance} Created
 }
 
 function ~()
 {
-	log ${._script}.${._instance} Deleted
+    log ${._script}.${._instance} Deleted
 }

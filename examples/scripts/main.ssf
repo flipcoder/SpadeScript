@@ -4,37 +4,37 @@ include weapon.ssf
 
 function main()
 {
-	set num_players = 4
-	
-	loop ${num_players}
-	{
-		spawn player.${_i}
-		
-		${player.${_i}.inventory}.has MACHINE_GUN
-		if ${_result}
-		{
-			log Player has Machine Gun
-		}
-		else
-		{
-			log Player does not have Machine Gun
-		}
+    set num_players = 4
+    
+    loop ${num_players}
+    {
+        spawn player.${_i}
+        
+        ${player.${_i}.inventory}.has MACHINE_GUN
+        if ${_result}
+        {
+            log Player has Machine Gun
+        }
+        else
+        {
+            log Player does not have Machine Gun
+        }
 
-		${player.${_i}.inventory}.has PISTOL
-		if ${_result}
-		{
-			log Player has Pistol
-		}
-		else
-		{
-			log Player does not have Pistol
-		}
-	}
-	
-	log Process Completed
-	
-	loop ${num_players}
-	{
-		remove player.${_i}
-	}
+        ${player.${_i}.inventory}.has PISTOL
+        if ${_result}
+        {
+            log Player has Pistol
+        }
+        else
+        {
+            log Player does not have Pistol
+        }
+    }
+    
+    log Process Completed
+    
+    loop ${num_players}
+    {
+        remove player.${_i}
+    }
 }
